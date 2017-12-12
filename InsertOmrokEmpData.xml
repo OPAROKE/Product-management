@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Omrokstuffmanagementsystem>
+  <omrokemployeeentry empId="6787" empFirstname="87687" empLastname="76876" />
+  <Omrokstuffmember>
+    <empId>
+    </empId>
+    <empFirstname>
+    </empFirstname>
+    <empLastname>
+    </empLastname>
+    <empSex>
+    </empSex>
+    <empEmail>
+    </empEmail>
+    <empAdress1>
+    </empAdress1>
+    <empAddress2>
+    </empAddress2>
+    <empCity>
+    </empCity>
+    <empZip>
+    </empZip>
+    <empState>
+    </empState>
+    <empCountry>
+    </empCountry>
+    <empTelephone>
+    </empTelephone>
+    <empMobilenumber>
+    </empMobilenumber>
+    <empFax>
+    </empFax>
+    <empSecondemail>
+    </empSecondemail>
+    <empProfile>
+    </empProfile>
+    <empOrg>
+    </empOrg>
+    <empRegnumber>
+    </empRegnumber>
+  </Omrokstuffmember>
+  <comment>5765765</comment>
+  <comment>876876</comment>
+</Omrokstuffmanagementsystem>

@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="OmrokBotik.master.cs" Inherits="OmrokBotik" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Omrok Botik Shop</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="omrokbotikshop" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <!--Header-->
+                <div>
+                    <header style="background-color: maroon; width: 100%; height: 65px;" valign="top">
+                        <span>
+                            <asp:Image ImageUrl="~/Gallery/OmrokAssets/OmrokProdMgmntHeader.jpg" Width="100%" Height="65" runat="server" /></span>
+                        <div style="background-color: black;">
+                            <asp:Menu ID="Menu1" runat="server" BackColor="Transparent" BorderStyle="None"
+                                Font-Bold="True" Font-Size="Large" Font-Underline="True" ForeColor="white"
+                                Orientation="Horizontal">
+                                <Items>
+                                    <asp:MenuItem Text="Home" Value="home" NavigateUrl="~/omrokLogin.html"></asp:MenuItem>
+                                    <asp:MenuItem Text="Employee Information" Value="imployeeinformation" NavigateUrl="~/EmployeeManagement.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="Product Data Entry" Value="productdataentry" NavigateUrl="~/ProductMaster.aspx">
+                                        <asp:MenuItem NavigateUrl="~/DisplayOmrokProductInformation.aspx" Text="Product Information Table" Value="Product Information Table"></asp:MenuItem>
+                                    </asp:MenuItem>
+                                    <asp:MenuItem Text="New products" Value="newproduct"></asp:MenuItem>
+                                    <asp:MenuItem Text="Used products" Value="usedproducts"></asp:MenuItem>
+                                    <asp:MenuItem Text="Contact Us" Value="contactus"></asp:MenuItem>
+                                    <asp:MenuItem Text="About Us" Value="aboutus"></asp:MenuItem>
+                                    <asp:MenuItem Text="Sign In" Value="SignIn"></asp:MenuItem>
+                                    <asp:MenuItem Text="Admin Registration" Value="AdminRegistration" NavigateUrl="~/OmrokAdminRegistration.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="Omrok Dynamics" Value="OmrokDynamics"></asp:MenuItem>
+                                </Items>
+                            </asp:Menu>
+                        </div>
+                    </header>
+                </div>
+        </asp:ContentPlaceHolder>
+    </div>
+        <div>
+            <asp:ContentPlaceHolder ID="omrokBotikBody" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

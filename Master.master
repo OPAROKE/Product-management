@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Master.master.cs" Inherits="Master" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Omrok Business Management</title>
+        <link rel="icon" href="/omroklogo.ico" type="image/x-icon" />
+    <link rel="icon" href="/omroklogo.ico" type="image/ico" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:omrokEmployeeConnectionstring %>" ProviderName="<%$ ConnectionStrings:omrokEmployeeConnectionstring.ProviderName %>" SelectCommand="SELECT * FROM [OmrokEmployees]"></asp:SqlDataSource>
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            <header style="background: url(Gallery/OmrokAssets/OmrokProdMgmntHeader.jpg); height: 100px;">
+            </header>
+            <div style="background-color:black;">
+                <asp:Menu ID="Menu1" runat="server" BackColor="Transparent" BorderStyle="None" 
+                    Font-Bold="True" Font-Size="Large" Font-Underline="True" ForeColor="white" 
+                    Orientation="Horizontal" OnMenuItemClick="Menu1_MenuItemClick">
+                    <Items>
+                        <asp:MenuItem Text="Home" Value="home" NavigateUrl="~/omrokLogin.html"></asp:MenuItem>
+                        <asp:MenuItem Text="Employee Information" Value="imployeeinformation" NavigateUrl="~/EmployeeManagement.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Product Data Entry" Value="productdataentry" NavigateUrl="~/ProductMaster.aspx">
+                            <asp:MenuItem NavigateUrl="~/DisplayOmrokProductInformation.aspx" Text="Product Information Table" Value="Product Information Table"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="New products" Value="newproduct"></asp:MenuItem>
+                        <asp:MenuItem Text="Used products" Value="usedproducts"></asp:MenuItem>
+                        <asp:MenuItem Text="Contact Us" Value="contactus"></asp:MenuItem>
+                        <asp:MenuItem Text="About Us" Value="aboutus"></asp:MenuItem>
+                        <asp:MenuItem Text="Sign In" Value="SignIn"></asp:MenuItem>
+                        <asp:MenuItem Text="Admin Registration" Value="AdminRegistration" NavigateUrl="~/OmrokAdminRegistration.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Omrok Dynamics" Value="OmrokDynamics"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </asp:ContentPlaceHolder>
+    </div>
+        <asp:ContentPlaceHolder ID="DataManager" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
